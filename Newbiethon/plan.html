@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESCRIPTION OF OUR PLANS FOR  OUR BOOKING WEBSITE </title>
+    <link rel="stylesheet" href="Book.css">
+</head>
+<style>
+    *{margin: 0;
+       padding: 0;}
+    .box{
+        
+        height:100vh;
+        width: 100vw;
+        box-sizing: border-box;
+        border: 7px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 25px;
+}
+
+.items{
+/* height:10vh;
+width:10vw; */
+height: 90vh;
+    width: 30vw;
+border: 5px solid;
+border-radius: 25px;
+
+}
+p{
+    position: relative;
+    /* top: 233px; */
+    top: 257px;
+    font-size: 25px;
+    color: white;
+    /* position: relative;
+    bottom: 25px; */
+}
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    bottom: -300px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  .uparaaja{
+    position: relative;
+    bottom: 30px;
+
+  }
+
+.Family-man{
+    background-position: center center;
+    background-image:url("https://images.assettype.com/thequint/2019-09/ae28ee31-9d3e-4687-a191-e42911a6d083/Full_Family.jpg") ;
+    
+    
+}
+.Salman-khan{
+    background-position:top right;
+    background-image: url("https://1.bp.blogspot.com/-GoKYtDXbNmU/UuCxULZ4JII/AAAAAAAADJo/EblCTbcchBU/s1600/b0e5cf8294c63550aa64e80d61c37ba0.jpg");
+}
+.couple{
+    background-position:top  ;
+    background-image: url("https://th.bing.com/th/id/OIP.qTFVZxHEG-8KeHYJ8Qq7qAHaE8?rs=1&pid=ImgDetMain");
+    background-repeat: no-repeat;
+}
+ .black{
+    color: black;
+ } 
+ h1{text-align: center;
+font-size: 50px;}
+  
+
+</style>
+<body>
+
+    <div class="box">
+    <div class="items Family-man">
+       
+        
+        <h1>Family Plan:</h1>
+        <!-- <img src="https://images.assettype.com/thequint/2019-09/ae28ee31-9d3e-4687-a191-e42911a6d083/Full_Family.jpg" alt="" height="150px">  -->
+        <p>Embark on an unforgettable journey with your loved ones! Our Family Fun-tastic Plan includes everything you need for a fantastic family vacation. From kid-friendly activities to spacious accommodations, this package ensures smiles for everyone. 
+            <form action="submit.php" method="post" >
+                <a href="Payment.html" class="btn">SELECT PLAN</a>
+                </form> 
+        </p>
+
+    </div>
+    <div class="items couple"><h1>Couples Plan:</h1> 
+    <p class="black">Set sail on a romantic adventure with our Couples' Bliss Voyage! Whether it's a honeymoon or a special getaway for two, this package offers intimate experiences and luxurious amenities to create lasting memories with your significant other.
+        <form action="submit.php" method="post" >
+            <a href="Payment.html" class="btn">SELECT PLAN</a>
+            </form> </p>
+
+    </div>
+    <div class="items Salman-khan"><h1>Singles Plan:</h1> <p>Our most attractive plan offers a great opportunity to young souls to discover the world with a group of individuals of same age but of different cultures and ethnicities. 
+        <form action="submit.php" method="post" class="uparaaja" >
+            <a href="Payment.html" class="btn">SELECT PLAN</a>
+            </form> </p></div>
+</div>
+
+</body>
+</html>

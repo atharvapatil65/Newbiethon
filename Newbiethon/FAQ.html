@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ Section with CSS Transitions</title>
+<style>
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightblue;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 7px solid;
+}
+
+h2 {
+  text-align: center;
+  color: #4CAF50;
+}
+
+.question {
+  cursor: pointer;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.question h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.question:hover h3 {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+/* Arrow Icon */
+.question::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #333;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.question.active::after {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  padding-left: 20px;
+}
+
+.question.active .answer {
+  max-height: 1000px; /* Adjust to fit the content */
+}
+
+.answer p {
+  margin: 0;
+  color: #666;
+}
+</style>
+</head>
+<body>
+
+<!-- FAQ Section -->
+<div class="faq-section">
+  <h2>FAQ Section</h2>
+  <div class="question" onclick="toggleAnswer(this)">
+    <h3>How do I book my travel on your website??</h3>
+    <div class="answer">
+      <p>Booking your travel is easy! Simply visit our website, select your destination and dates, and follow the prompts to book your flights, accommodation, and any other services you need.</p>
+    </div>
+  </div>
+  <div class="question" onclick="toggleAnswer(this)">
+    <h3>Can I make changes to my booking after it's been confirmed?</h3>
+    <div class="answer">
+      <p>Yes, you can! Just log in to your account on our website and navigate to the 'Manage Booking' section to make changes to your itinerary.</p>
+    </div>
+  </div>
+  <div class="question" onclick="toggleAnswer(this)">
+    <h3>What payment methods do you accept?</h3>
+    <div class="answer">
+      <p>We accept a variety of payment methods, including credit cards, debit cards, and PayPal. You can choose the option that is most convenient for you during the booking process.</p>
+    </div>
+  </div>
+  <div class="question" onclick="toggleAnswer(this)">
+    <h3> Is travel insurance included in my booking?</h3>
+    <div class="answer">
+      <p>Travel insurance is not included in standard bookings, but you can add it to your reservation during the booking process for an additional fee.</p>
+    </div>
+  </div>
+  <div class="question" onclick="toggleAnswer(this)">
+    <h3> How can I contact customer support if I need assistance during my trip?</h3>
+    <div class="answer">
+      <p>Our customer support team is available 24/7 to assist you. You can contact us by phone, email, or live chat for any help you may need before, during, or after your trip.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Function to toggle FAQ answer
+function toggleAnswer(question) {
+  question.classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

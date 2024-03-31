@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Portal</title>
+    <link rel="stylesheet" href="payment2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .PG {
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            color: white;
+        }
+        .Payment {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .Payment input[type="radio"] {
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+        .Payment label {
+            margin-left: 10px;
+            font-size: 18px;
+            color: white;
+        }
+        .Payment button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+ <h1 class="PG">Payment Gateway</h1>
+ <div class="Payment">
+ <form action="/submit_payment" method="post">
+ <fieldset>
+ <legend><h1>Select Payment Method</h1></legend>
+ <input type="radio" id="UPI" name="Payment" value="UPI" required>
+ <label for="UPI"><a href="https://www.bhimupi.org.in/"></a><img class="UPI" src="https://i.ibb.co/9rPBzdh/UPI-12925.png" alt="UPI-12925" height="50"></label><br>
+ <input type="radio" id="Cards" name="Payment" value="DC" required>
+ <label for="Cards"><a href="card.html"><img src="https://i.ibb.co/J3sxW05/card.png" alt="card" border="0" height="50"> </a></label><br>
+ <input type="radio" id="NetB" name="Payment" value="NetB" required>
+ <label for="NetB"><a href="https://www.onlinesbi.sbi/"><img src="https://i.ibb.co/St985s3/NB.jpg" alt="NB" border="0" height="50"> </a></label><br>
+ <input type="radio" id="EMI" name="Payment" value="EMI" required>
+ <label for="EMI"><img src="https://i.ibb.co/JKHZtFF/emi.png" alt="emi" border="0" height="50"> </label><br>
+ </fieldset>
+ </form>
+ </div>
+</body>
+</html>
